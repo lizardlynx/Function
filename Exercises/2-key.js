@@ -1,9 +1,15 @@
 'use strict';
 
 const generateKey = (length, possible) => {
-  // Generate string of random characters
-  // Use Math.random() and Math.floor()
-  // See documentation at MDN
+  let string = [];
+  while (string.length<length) {
+    string.push(possible[Math.floor(Math.random()*length)]);
+  }
+  return string.join('');
 };
 
 module.exports = { generateKey };
+
+// Generate string of random characters
+// Use Math.random() and Math.floor()
+// See documentation at MDN
